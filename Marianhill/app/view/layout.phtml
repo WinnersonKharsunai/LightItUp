@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My site</title>
+    <link href="style.css" rel = "stylesheet"></link>
+</head>
+<body>
+    <div id= "container">
+        <nav>
+            <ul>
+                <li><a href="?page=home" class="<?php echo is_active($page,'home'); ?>">Home</a></li>
+                <li><a href="?page=test" class="<?php echo is_active($page,'test'); ?>">Test</a></li>
+            </ul>
+        </nav>
+        <section id="main">
+            <?php
+                include $main_content;
+            ?>
+        </section>
+    </div>
+</body>
+</html>
